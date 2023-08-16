@@ -24,4 +24,4 @@ int is_palindrome(listint_t **head);
 size_t print_listint(const listint_t *h);
 
 
-#endif /* LISTS_H /
+#endif /* LISTS_H */
