@@ -1,11 +1,12 @@
 #!/usr/bin/python3
-"""Define a class Square."""
+"""Defined a class Square."""
+
 
 class Square:
-    """A square is represented."""
+    """Represents a square."""
 
     def __init__(self, size=0):
-        """A new square is initialised.
+        """Initializes a new square.
 
         Args:
             size (int): The size of the new square.
