@@ -10,6 +10,7 @@ class Rectangle:
     """
 
     number_of_istances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """Initialises the instance variables"""
@@ -70,10 +71,8 @@ class Rectangle:
 
     def __repr__(self):
         """Return the string represnetation of the Rectangle."""
-
         return (f"Rectangle({self.__width}, {self.__height})")
 
     def __del__(self):
-        """Prints a bye message for every deletion of the Rectangle."""
-        Rectangle.number_of_instances -= 1
+        """Prints a bye message when the Rectangle is deleted."""
         print("Bye rectangle...")
