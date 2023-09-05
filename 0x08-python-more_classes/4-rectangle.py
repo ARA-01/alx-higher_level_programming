@@ -60,5 +60,9 @@ class Rectangle:
         for i in range(self.__height):
             [rectangle_str.append('#') for j in range(self.__width)]
             if i != self.__height - 1:
-                rectangle_str.append("\n")         
+                rectangle_str.append("\n")
         return ("".join(rectangle_str))
+
+    def __repr__(self):
+        """Return the string represnetation of the Rectangle."""
+        return (f"Rectangle({self.__width}, {self.__height})")
