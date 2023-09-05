@@ -50,7 +50,8 @@ class Rectangle:
 
     def __str__(self):
         """Returns the string representation of the Rectangle.
-	Represent the Rectangle with # character.
+
+        Represent the Rectangle with # character.
         """
         if self.__width == 0 or self.__height == 0:
             return ("")
@@ -68,6 +69,5 @@ class Rectangle:
 
     def __del__(self):
         """Prints a bye message for every deletion of the Rectangle."""
-
         print("Bye rectangle...")
 
