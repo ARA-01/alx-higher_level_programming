@@ -58,7 +58,8 @@ class Rectangle:
 
     def __str__(self):
         """Returns the string representation of the Rectangle.
-	Represent the Rectangle with # character.
+
+        Represent the Rectangle with # character.
         """
         if self.__width == 0 or self.__height == 0:
             return ("")
@@ -71,7 +72,7 @@ class Rectangle:
         return ("".join(rectangle_str))
 
     def __repr__(self):
-        """Return the string represnetation of the Rectangle."""
+        """Return the string representation of the Rectangle."""
         return (f"Rectangle({self.__width}, {self.__height})")
 
     def __del__(self):

@@ -7,13 +7,13 @@ class Rectangle:
 
     Attributes:
         number_of_instances (int): The number of instances of the Rectangle.
+	print_symbol (any): symbol is used for string representation.
     """
 
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """Initialises the instance variables"""
-        Rectangle.number_of_instances += 1
         self.width = width
         self.height = height
 
@@ -75,6 +75,25 @@ class Rectangle:
         return (f"Rectangle({self.__width}, {self.__height})")
 
     def __del__(self):
-        """Prints a bye message for every deletion of the Rectangle."""
-        Rectangle.number_of_instances -= 1
+        """Prints a bye message when the Rectangle is deleted."""
         print("Bye rectangle...")
+
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+
+        area_1 = rect_1.area()
+        area_2 = rect_2.area()
+
+        if area_1 >= area_2:
+            return rect_1
+        else:
+            return rect_2
+
+    @classmethod
+    def square(cls, size=0):
+        return (cls(size, size))
+
