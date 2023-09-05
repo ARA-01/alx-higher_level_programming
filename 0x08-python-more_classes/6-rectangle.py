@@ -9,10 +9,11 @@ class Rectangle:
         number_of_instances (int): The number of instances of the Rectangle.
     """
 
-    number_of_istances = 0
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """Initialises the instance variables"""
+        Rectangle.number_of_instances += 1
         self.width = width
         self.height = height
 

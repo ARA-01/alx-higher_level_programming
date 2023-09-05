@@ -7,13 +7,15 @@ class Rectangle:
 
     Attributes:
         number_of_instances (int): The number of instances of the Rectangle.
+        print_symbol (any): symbol is used for string representation.
     """
 
-    number_of_istances = 0
+    number_of_instances = 0
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """Initialises the instance variables"""
+        Rectangle.number_of_instances += 1
         self.width = width
         self.height = height
 
@@ -75,4 +77,5 @@ class Rectangle:
 
     def __del__(self):
         """Prints a bye message when the Rectangle is deleted."""
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
