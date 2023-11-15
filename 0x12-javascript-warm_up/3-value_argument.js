@@ -1,11 +1,6 @@
 #!/usr/bin/node
-
-// Use const to create constants
-const arg = process.argv[2];
-
-//Check if an argument is provided
-if (arg) {
-	console.log(arg); // Print the first argument
+if (process.argv[2] === undefined) {
+  console.log('No argument');
 } else {
-	console.log("No argument"); // Print "No argument" if no arguments are provided
+  console.log(process.argv[2]);
 }
