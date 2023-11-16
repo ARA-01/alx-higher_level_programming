@@ -1,7 +1,7 @@
 #!/usr/bin/node
-let narg = 0; // Initialize the counter variable
+let narg = 0;
 
 exports.logMe = function (item) {
-  console.log('$(narg):$(item)');
-  narg++; // increment the counter after printing
+  console.log(narg + ':' + item);
+  narg++;
 };
